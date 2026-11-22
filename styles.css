@@ -121,6 +121,7 @@ section.s{padding:84px 0}
 .cf label{font-weight:600;display:grid;gap:6px}
 .cf input,.cf textarea,.cf select{font:inherit;padding:14px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--text)}
 .cf input:focus,.cf textarea:focus,.cf select:focus{border-color:var(--blue);outline:none}
+.st{font-weight:600;min-height:1.6em;margin:0}.st.ok{color:var(--link)}.st.err{color:#d6402b}
 .info{background:var(--navy);color:#fff;border-radius:32px;padding:38px;display:grid;gap:22px}
 .info h3{font-size:1.7rem}
 .info b{color:var(--yellow);display:block}

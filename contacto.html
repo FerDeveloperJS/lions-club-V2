@@ -1,52 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Contacto | Club de Leones</title>
-<meta name="description" content="Escríbenos para ser voluntario, pedir apoyo o colaborar con el Club de Leones.">
-<link rel="icon" href="logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header><div class="wrap bar">
-<a class="brand" href="index.html" aria-label="Club de Leones, inicio"><span class="mk"><img src="logo.svg" alt=""></span>Club de Leones</a>
-<button id="burger" aria-expanded="false">Menú</button>
-<nav id="nav"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html">Servicios</a><a href="novedades.html">Novedades</a><a href="contacto.html" class="on" aria-current="page">Contacto</a></nav>
-</div></header>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Contacto | Club de Leones</title>
+    <meta
+      name="description"
+      content="Escríbenos para ser voluntario, pedir apoyo o colaborar con el Club de Leones."
+    />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap bar">
+        <a class="brand" href="index.html" aria-label="Club de Leones, inicio"
+          ><span class="mk"><img src="logo.svg" alt="" /></span>Club de
+          Leones</a
+        >
+        <button id="burger" aria-expanded="false">Menú</button>
+        <nav id="nav">
+          <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a
+          ><a href="servicios.html">Servicios</a
+          ><a href="novedades.html">Novedades</a
+          ><a href="contacto.html" class="on" aria-current="page">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-<main>
-<section class="pageh"><div class="wrap"><h1>Contáctanos</h1><p>Cuéntanos cómo quieres ayudar, o qué apoyo necesitas.</p></div>
-<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50C320 100 560 0 860 40s380 40 580-10V90H0z"/></svg></section>
-<section class="s"><div class="wrap split">
-<form class="cf" id="cf">
-<label>Nombre<input name="n" required autocomplete="name"></label>
-<label>Correo<input type="email" name="e" required autocomplete="email"></label>
-<label>Motivo<select name="m"><option>Quiero ser voluntario</option><option>Necesito apoyo</option><option>Quiero donar</option><option>Otro</option></select></label>
-<label>Mensaje<textarea name="t" rows="5" required></textarea></label>
-<button class="btn y" type="submit">Enviar mensaje</button>
-</form>
-<div class="info"><h3>Estamos en Quibdó, Chocó</h3>
-<p><b>Correo</b>contacto@clubdeleonesquibdochoco.org</p>
-<p><b>Dirección</b>Quibdó, Chocó, Colombia</p>
-<p><b>Reuniones</b>Agrega aquí los días y horarios de tu club.</p></div>
-</div></section>
-</main>
+    <main>
+      <section class="pageh">
+        <div class="wrap">
+          <h1>Contáctanos</h1>
+          <p>Cuéntanos cómo quieres ayudar, o qué apoyo necesitas.</p>
+        </div>
+        <svg
+          class="wave"
+          viewBox="0 0 1440 90"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path d="M0 50C320 100 560 0 860 40s380 40 580-10V90H0z" />
+        </svg>
+      </section>
+      <section class="s">
+        <div class="wrap split">
+          <form class="cf" id="cf">
+            <label
+              >Nombre<input name="nombre" required autocomplete="name"
+            /></label>
+            <label
+              >Correo<input
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+            /></label>
+            <label
+              >Motivo<select name="motivo">
+                <option>Quiero ser voluntario</option>
+                <option>Necesito apoyo</option>
+                <option>Quiero donar</option>
+                <option>Otro</option>
+              </select></label
+            >
+            <label
+              >Mensaje<textarea name="mensaje" rows="5" required></textarea>
+            </label>
+            <input
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+              style="display: none"
+            />
+            <button class="btn y" type="submit">Enviar mensaje</button>
+            <p class="st" id="st" role="status" aria-live="polite"></p>
+          </form>
+          <div class="info">
+            <h3>Estamos en Quibdó, Chocó</h3>
+            <p><b>Correo</b>clubdeleonesquibdomonarca@hotmail.com</p>
+            <p><b>Dirección</b>Calle 31 Nº 1-01 ,Quibdó, Colombia</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<footer><div class="wrap">
-<div><div class="brand"><span class="mk"><img src="logo.svg" alt=""></span>Club de Leones</div><small>Sirviendo a Quibdó y el Chocó desde 1956</small></div>
-<nav><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html">Servicios</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></nav>
-</div></footer>
+    <footer>
+      <div class="wrap">
+        <div>
+          <div class="brand">
+            <span class="mk"><img src="logo.svg" alt="" /></span>Club de Leones
+          </div>
+          <small>Sirviendo a Quibdó y el Chocó desde 1956</small>
+        </div>
+        <nav>
+          <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a
+          ><a href="servicios.html">Servicios</a
+          ><a href="novedades.html">Novedades</a
+          ><a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </footer>
 
-<script src="app.js"></script>
-<script>
-document.getElementById("cf").onsubmit=function(e){
-  e.preventDefault();var f=e.target;
-  var body="Nombre: "+f.n.value+"\nMotivo: "+f.m.value+"\n\n"+f.t.value;
-  location.href="mailto:contacto@clubdeleonesquibdochoco.org?subject="+encodeURIComponent("Mensaje desde la web: "+f.m.value)+"&body="+encodeURIComponent(body);
-};
-</script>
-</body>
+    <script src="app.js"></script>
+    <script>
+      (function () {
+        var f = document.getElementById("cf"),
+          st = document.getElementById("st"),
+          btn = f.querySelector("button[type=submit]");
+        f.onsubmit = function (e) {
+          e.preventDefault();
+          if (f._honey.value) return;
+          btn.disabled = true;
+          btn.textContent = "Enviando…";
+          st.className = "st";
+          st.textContent = "";
+          fetch(
+            "https://formsubmit.co/ajax/clubdeleonesquibdomonarca@hotmail.com",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify({
+                nombre: f.nombre.value,
+                email: f.email.value,
+                motivo: f.motivo.value,
+                mensaje: f.mensaje.value,
+                _subject: "Mensaje desde la web: " + f.motivo.value,
+                _template: "table",
+                _captcha: "false",
+              }),
+            },
+          )
+            .then(function (r) {
+              return r
+                .json()
+                .catch(function () {
+                  return {};
+                })
+                .then(function (d) {
+                  if (!r.ok || d.success === false || d.success === "false")
+                    throw new Error("fail");
+                });
+            })
+            .then(function () {
+              f.reset();
+              st.className = "st ok";
+              st.textContent =
+                "¡Gracias! Recibimos tu mensaje y te responderemos pronto.";
+            })
+            .catch(function () {
+              st.className = "st err";
+              st.textContent =
+                "No pudimos enviar el mensaje. Inténtalo de nuevo o escríbenos a clubdeleonesquibdomonarca@hotmail.com";
+            })
+            .then(function () {
+              btn.disabled = false;
+              btn.textContent = "Enviar mensaje";
+            });
+        };
+      })();
+    </script>
+  </body>
 </html>
