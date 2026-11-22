@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Servicios | Club de Leones</title>
+<meta name="description" content="Emergencias, adulto mayor, salud, educación y comunidad: lo que hacemos por Quibdó y el Chocó.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="index.html" aria-label="Club de Leones, inicio"><span class="mk"><img src="logo.svg" alt=""></span>Club de Leones</a>
+<button id="burger" aria-expanded="false">Menú</button>
+<nav id="nav"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html" class="on" aria-current="page">Servicios</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></nav>
+</div></header>
+
+<main>
+<section class="pageh"><div class="wrap"><h1>Nuestros servicios</h1><p>Lo que hacemos por Quibdó y el Chocó, y todo lo que ya hemos hecho.</p></div>
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 100 520 0 800 50s460 30 640-20V90H0z"/></svg></section>
+<section class="s"><div class="wrap">
+<div class="feat"><div><h3>Respuesta al terremoto en la zona minera</h3><p>Tras el terremoto del 10 de agosto de 2026, el club entregó ayudas humanitarias a familias damnificadas, con el apoyo de LCIF.</p><button class="btn y" id="fe" type="button" style="margin-top:22px">Ver estas jornadas</button></div><div class="fn"><b id="en"></b><span>jornadas de ayuda registradas</span></div></div>
+<h2 class="h2">Nuestro trabajo, por áreas</h2>
+<p class="sub" id="tot"></p>
+<div class="svx" id="svx"><div id="cats" role="group" aria-label="Áreas de servicio"></div><div><h3 id="ct"></h3><p class="sub" id="cd"></p><div id="list"></div></div></div>
+</div></section>
+<section class="band"><div class="wrap"><h2>¿Necesitas ayuda o quieres colaborar?</h2><a class="btn b" href="contacto.html">Escríbenos</a></div></section>
+</main>
+
+<footer><div class="wrap">
+<div><div class="brand"><span class="mk"><img src="logo.svg" alt=""></span>Club de Leones</div><small>Sirviendo a Quibdó y el Chocó desde 1956</small></div>
+<nav><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html">Servicios</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></nav>
+</div></footer>
+
+<script src="app.js"></script>
+<script>
+(function(){
+var M=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+var D=("2026-10|e|Ayudas a familias damnificadas por el terremoto en la zona minera;2026-10|e|Entrega de ayudas en la Escuela Melvin Jones;2026-10|e|Ayudas a damnificados del barrio La Virgen del Carmen;2026-09|e|Entrega de ayudas humanitarias a damnificados;2026-09|a|Sembrando sonrisas en el Anciano Nicolás Medrano;2026-08|e|Inspección de las afectaciones del terremoto;2025-01|a|Atención al adulto mayor;2024-12|a|Novena en el Anciano Nicolás Medrano;2024-12|c|Aguinaldos en el barrio La Virgen del Carmen;2024-11|s|Toma de glucometría;2024-10|s|Maratón de cardiodiagnóstico;2024-10|s|Tamizaje visual;2024-10|d|Concurso del Cartel de la Paz;2024-05|c|Celebración del Día del Niño;2024-04|c|Donación de mercados;2024-04|c|Olla comunitaria;2024-03|d|Programa Leones Educando;2024-02|c|Donación de mercados;2024-01|d|Donación de kits escolares;2023-12|c|Aguinaldos a niños y niñas;2023-12|a|Donación al ancianato;2023-11|s|Toma de glicemia;2023-11|d|Concurso del Cartel de la Paz;2023-11|c|Donación de mercados;2023-09|c|Olla comunitaria;2023-08|s|Tamizaje visual;2023-08|a|Día del Adulto Mayor;2023-07|c|Donación de mercados").split(";").map(function(r){var p=r.split("|");return{y:p[0].slice(0,4),m:+p[0].slice(5),k:p[1],t:p[2]}});
+var C=[["all","🦁","Todas","Todo el servicio que hemos registrado desde julio de 2023, de lo más reciente a lo más antiguo."],["e","🚨","Emergencias","Ayuda humanitaria para las familias afectadas por el terremoto de agosto de 2026 en la zona minera, con apoyo de LCIF."],["a","🧓","Adulto mayor","Visitas, donaciones y celebraciones con los adultos mayores del Anciano Nicolás Medrano y de la ciudad."],["s","🩺","Salud","Jornadas de tamizaje visual, toma de glucometría y maratones de cardiodiagnóstico."],["d","📚","Educación","Concursos del Cartel de la Paz, kits escolares y el programa Leones Educando."],["c","🤝","Comunidad","Donación de mercados, ollas comunitarias, aguinaldos y celebraciones para niños y familias."]];
+var cur="all",cats=document.getElementById("cats"),btns=[];
+function cnt(k){return k==="all"?D.length:D.filter(function(d){return d.k===k}).length}
+function ico(k){return C.filter(function(c){return c[0]===k})[0][1]}
+function draw(){
+  btns.forEach(function(b,i){b.setAttribute("aria-pressed",C[i][0]===cur)});
+  var s=C.filter(function(c){return c[0]===cur})[0];
+  document.getElementById("ct").textContent=s[2];document.getElementById("cd").textContent=s[3];
+  var h="",y="";
+  D.filter(function(d){return cur==="all"||d.k===cur}).forEach(function(d){
+    if(d.y!==y){if(y)h+="</ul>";y=d.y;h+="<h4>"+y+"</h4><ul>"}
+    h+="<li><span class='mo'>"+M[d.m-1]+"</span><span>"+d.t+"</span><span aria-hidden='true'>"+(cur==="all"?ico(d.k):"")+"</span></li>";
+  });
+  document.getElementById("list").innerHTML=h+"</ul>";
+}
+C.forEach(function(c){var b=document.createElement("button");b.type="button";b.innerHTML="<span aria-hidden='true'>"+c[1]+"</span>"+c[2]+"<b>"+cnt(c[0])+"</b>";b.onclick=function(){cur=c[0];draw()};cats.appendChild(b);btns.push(b)});
+document.getElementById("en").textContent=cnt("e");
+document.getElementById("tot").textContent=D.length+" actividades registradas desde julio de 2023.";
+document.getElementById("fe").onclick=function(){cur="e";draw();document.getElementById("svx").scrollIntoView({behavior:"smooth",block:"start"})};
+draw();
+})();
+</script>
+</body>
+</html>
